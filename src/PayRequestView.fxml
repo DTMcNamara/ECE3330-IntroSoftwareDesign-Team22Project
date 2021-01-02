@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="payRequestController">
+   <children>
+      <Pane prefHeight="66.0" prefWidth="375.0" style="-fx-background-color: #FFCD00;">
+         <children>
+            <Hyperlink fx:id="cancelTransfer" layoutX="11.0" layoutY="18.0" onAction="#cancelTransferAction" prefHeight="36.0" prefWidth="82.0" text="Cancel">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Hyperlink>
+            <Label layoutX="93.0" layoutY="14.0" prefHeight="43.0" prefWidth="185.0" text="Pay or Request">
+               <font>
+                  <Font name="Sitka Text Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextArea fx:id="userNamePayArea" layoutY="66.0" prefHeight="59.0" prefWidth="230.0" wrapText="true" />
+      <TextField fx:id="payAmountToUserField" alignment="CENTER_RIGHT" layoutX="230.0" layoutY="66.0" prefHeight="59.0" prefWidth="145.0" promptText="\$0.00" />
+      <RadioButton fx:id="privacyButton" layoutX="25.0" layoutY="143.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="161.0" text="Private Transfer">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </RadioButton>
+      <TextField fx:id="memoField" alignment="TOP_LEFT" layoutY="191.0" prefHeight="231.0" prefWidth="375.0" promptText="What's it for?">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets left="12.0" top="12.0" />
+         </padding>
+      </TextField>
+      <Button fx:id="payToUserButton" layoutY="422.0" mnemonicParsing="false" onAction="#payToUserAction" prefHeight="33.0" prefWidth="185.0" text="Pay">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="RequestFromUserButton" layoutX="190.0" layoutY="422.0" mnemonicParsing="false" onAction="#RequestFromUserButton" prefHeight="33.0" prefWidth="185.0" text="Request">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Separator layoutX="185.0" layoutY="422.0" orientation="VERTICAL" prefHeight="33.0" prefWidth="2.0" />
+      <Text fx:id="paymentUnsuccessful" fill="RED" layoutX="67.0" layoutY="488.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Unsuccessful! Not enough funds!" visible="false" wrappingWidth="243.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="invalidAmountEnteredText" fill="RED" layoutX="65.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid Amount Entered!" visible="false" wrappingWidth="252.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
